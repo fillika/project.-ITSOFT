@@ -52,6 +52,7 @@ li {
   }
 
   &__lupein-baby {
+    cursor: pointer;
     display: none;
     position: absolute;
     left: 20px;
@@ -59,13 +60,39 @@ li {
   }
 
   &__lupein-adult {
+    cursor: pointer;
     position: absolute;
     display: none;
     left: 140px;
     bottom: 20px;
 
+    &:hover .eyes__complex {
+      display: none;
+    }
+
     &_left20px {
       left: 20px;
+    }
+  }
+
+  &__complex {
+    font-family: 'Open sans',sans-serif;
+    font-size: 13px;
+    color: #005494;
+    position: absolute;
+    text-transform: none;
+    display: block;
+    width: 160px;
+    height: 40px;
+    border-radius: 30px;
+    background: #fff;
+    left: 170px;
+    bottom: 25px;
+    text-align: center;
+    padding-top: 10px;
+
+    &_left50px {
+      left: 50px;
     }
   }
 }
@@ -99,13 +126,26 @@ li {
 
   &:hover .blue-eye__active,
   &:hover .eyes__lupein-baby,
-  &:hover .eyes__lupein-adult {
+  &:hover .eyes__lupein-adult,
+  &:hover .blue-eye__weakness {
     display: block;
   }
 
   &:hover .blue-eye__non-active,
   &:hover .eyes__text {
     display: none;
+  }
+
+  &__weakness {
+    display: none;
+    font-family: 'Open sans', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    position: absolute;
+    text-transform: none;
+    top: 40px;
+    right: 70px;
+    color: #93C2D8;
   }
 
   &__active {
@@ -132,7 +172,8 @@ li {
 .green-eye {
   background: #00B770;
 
-  &:hover .eyes__lupein-adult, &:hover .eyes__lupein-baby {
+  &:hover .eyes__lupein-adult,
+  &:hover .eyes__lupein-baby {
     display: block;
   }
 
@@ -144,7 +185,8 @@ li {
 .yellow-eye {
   background: #FFB131;
 
-  &:hover .eyes__lupein-adult, &:hover .eyes__lupein-baby {
+  &:hover .eyes__lupein-adult,
+  &:hover .eyes__lupein-baby {
     display: block;
   }
 
@@ -157,6 +199,7 @@ li {
 .bad-vision {
   background: #CAE5F4;
   height: 610px;
+  display: flex;
 }
 
 .risk-groups {
@@ -188,9 +231,35 @@ li {
 
   &__list {
     position: absolute;
+    bottom: 45px;
+    left: 35%;
   }
 
   &__navigation {
-    display: inline-block;
+    font-family: 'Open sans', sans-serif;
+    font-size: 11px;
+    width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__link {
+    padding: 7px 15px;
+    background: #fff;
+    color: #005494;
+    border-radius: 22px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+
+    &:hover {
+      background: #005494;
+      color: #fff;
+    }
+
+    &:nth-child(2) {
+      background: #005494;
+      color: #fff;
+    }
   }
 }
