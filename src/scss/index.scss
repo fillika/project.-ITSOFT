@@ -10,7 +10,8 @@
   margin: 0;
 }
 
-a, li {
+a,
+li {
   text-decoration: none;
   color: #fff;
 }
@@ -23,4 +24,49 @@ a, li {
   width: 210px;
   background: #005397;
   height: 100vh;
+}
+
+.main-section {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.eyes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blue-eye,
+.red-eye,
+.green-eye,
+.yellow-eye {
+  font-family: 'Open sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  width: 50%;
+  max-height: 415px;
+  min-height: 400px;
+}
+
+.blue-eye {
+  background: #0083B0;
+}
+
+.red-eye {
+  background: #EB5364;
+}
+
+.green-eye {
+  background: #00B770;
+}
+
+.yellow-eye {
+  background: #FFB131;
 }
