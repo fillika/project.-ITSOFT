@@ -1,0 +1,26 @@
+@import 'utils/libs';
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/fonts';
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a, li {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-page {
+  display: flex;
+}
+
+.left-sidebar {
+  width: 210px;
+  background: #005397;
+  height: 100vh;
+}
