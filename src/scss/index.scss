@@ -22,6 +22,35 @@ li {
   font-size: 45px;
 }
 
+.button {
+  font-family: 'Open sans', sans-serif;
+  border-radius: 22px;
+  border: 3px solid #fff;
+
+  &__blue {
+    color: #005494;
+    border-color: #005494;
+    padding: 17px 36px 19px 40px;
+
+    &:hover {
+      transition: ease .5s;
+      color: #fff;
+      background: #005494;
+    }
+  }
+
+  &__white {
+    padding: 17px 40px 17px 47px;
+    background: #0083B0;
+
+    &:hover {
+      transition: ease .5s;
+      color: #005494;
+      background: #fff;
+    }
+  }
+}
+
 .main-page {
   display: flex;
 }
@@ -65,10 +94,6 @@ li {
     display: none;
     left: 140px;
     bottom: 20px;
-
-    &:hover .eyes__complex {
-      display: none;
-    }
 
     &_left20px {
       left: 20px;
@@ -265,4 +290,34 @@ li {
       color: #fff;
     }
   }
+
+  &__button {
+    font-size: 13px;
+    padding: 8px 20px;
+  }
+}
+
+.other {
+  min-height: 610px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__button {
+    font-size: 28px;
+    border-radius: 45px 
+  }
+}
+
+.online-test, .where-to-buy {
+  width: 50%;
+  min-width: 550px;
+  height: 610px;
+
+  &__footer {
+    display: flex;
+  }
+}
+
+.where-to-buy {
+  background: #0083B0;
 }
