@@ -14,12 +14,42 @@ a,
 li {
   text-decoration: none;
   color: #fff;
+  list-style-type: none;
 }
 
 .h1 {
   font-family: 'Open sans', sans-serif;
   font-weight: bold;
   font-size: 45px;
+}
+
+.burger {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  display: none;
+  width: 50px;
+  height: 5px;
+  border: 4px solid #005397;
+  border-radius: 22px;
+
+  &::after, &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -4px;
+    top: 7px;
+    width: 42px;
+    height: 0px;
+    border: 4px solid #005397;
+    border-radius: 22px;
+  }
+
+  &::before {
+    left: -4px;
+    top: -15px;
+  }
+
 }
 
 .button {
@@ -51,21 +81,75 @@ li {
   }
 }
 
+.icon {
+
+  &-facebook,
+  &-twitter,
+  &-skype {
+    color: #078FC0;
+    margin: 0;
+    font-size: 20px;
+  }
+}
+
 .main-page {
   display: flex;
 }
 
 .left-sidebar {
-  width: 210px;
+  position: fixed;
+  min-width: 215px;
   background: #005397;
-  flex-grow: 1;
+  height: 100vh;
+  font-family: 'Open-sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 3;
+
+  &__navigation {
+    margin-left: 25px;
+    margin-top: 35px;
+
+    &>li {
+      line-height: 2.1;
+
+      &>a {
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  &__contacts {
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+  }
+
+  &__hotline {
+    font-size: 14px;
+    color: #63B4DD;
+  }
+
+  &__phone {
+    padding-top: 10px;
+    color: #fff;
+  }
+
+
+}
+
+.icons {
+  margin-left: 20px;
+  margin-top: 15px;
 }
 
 .main-section {
   width: 100%;
+  margin-left: 215px;
 }
 
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   height: 40px;
@@ -170,8 +254,7 @@ li {
   color: #fff;
   position: relative;
   width: 50%;
-  max-height: 415px;
-  min-height: 400px;
+  min-height: 455px;
 }
 
 .blue-eye {
@@ -196,9 +279,10 @@ li {
     font-weight: 800;
     position: absolute;
     text-transform: none;
-    top: 40px;
-    right: 70px;
+    top: 35px;
+    right: 75px;
     color: #93C2D8;
+    letter-spacing: 3.6px;
   }
 
   &__active {

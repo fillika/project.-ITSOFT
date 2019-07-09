@@ -1,4 +1,6 @@
 @import 'header.css'; 
+@import '../fonts/fontello/css/fontello.css'; 
+
 /* Импортировал другие CSS файлы из этой же папки */
 /* @import '../fonts/fontawesome/css/all.css';
 @import '../fonts/Roboto/roboto.css';
