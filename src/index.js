@@ -22,3 +22,17 @@ jQuery(document).ready(function($) {               // Для проверки р
     arrows: true
   });
 });
+
+document.querySelector('.burger').addEventListener('click', (element) => {
+  element.preventDefault();
+  let sideBar = document.querySelector('.left-sidebar');
+  let mainSection = document.querySelector('.main-section');
+
+  if (sideBar.style.left != '0px') {
+    sideBar.style.left = '0px';
+    mainSection.style.marginLeft = '215px';
+  } else {
+    sideBar.style.left = '-215px';
+    mainSection.style.marginLeft = '0px';
+  }
+});

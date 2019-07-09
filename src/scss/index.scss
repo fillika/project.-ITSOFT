@@ -112,6 +112,7 @@ li {
   font-size: 16px;
   z-index: 3;
   transition: all ease .5s;
+  z-index: 100;
 
   &__navigation {
     margin-left: 25px;
@@ -773,6 +774,14 @@ button:focus {
     font-size: 25px;
   }
 
+  .left-sidebar__contacts {
+    top: 570px;
+  }
+
+  .blue-eye__weakness {
+    right: 10px;
+  }
+
   .bad-vision {
 
     height: 750px;
@@ -839,4 +848,8 @@ button:focus {
     left: -20%;
 
   }
+}
+
+@media screen and (max-width: 331px) {
+  
 }
