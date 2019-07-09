@@ -362,6 +362,7 @@ li {
 
   &__slide {
     position: relative;
+    height: 610px;
 
   }
 
@@ -593,7 +594,7 @@ li {
 
 .slick-next {
   right: -50px;
-  top: 60%;
+  top: 30%;
  
   &::before {
     content: '';
@@ -610,7 +611,7 @@ li {
 
 .slick-prev {
   left: -95px;
-  top: 60%;
+  top: 30%;
 
   &::before {
     content: '';
@@ -630,7 +631,7 @@ li {
 .slick-dots {
   left: 50%;
   transform: translate(-50%, 0);
-  bottom: -150px;
+  bottom: 150px;
   background: #CAE5F4;
   z-index: 3;
 
