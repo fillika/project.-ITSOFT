@@ -167,6 +167,7 @@ li {
   max-width: 100%;
   padding-left: 215px;
   transition: all ease .5s;
+  overflow: hidden;
 }
 
 .header {
@@ -573,12 +574,58 @@ li {
 .slick-next,
 .slick-dots {
   position: absolute;
+  border: none;
+}
+
+.slick-prev, .slick-next {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: #005397;
+  border-radius: 50%;
+  color: #005397;
+  cursor: pointer;
+}
+
+.slick-disabled {
+  opacity: .5;
+}
+
+.slick-next {
+  right: -50px;
+  top: 60%;
+ 
+  &::before {
+    content: '';
+    background: url("../img/arrow-right.png") no-repeat;
+    display: block;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 35px;
+    z-index: 5;
+  }
 }
 
 .slick-prev {
-  left: -30px;
-  top: 50%;
+  left: -95px;
+  top: 60%;
+
+  &::before {
+    content: '';
+    background: url("../img/arrow-left.png") no-repeat;
+    display: block;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    top: 35px;
+    z-index: 5;
+  }
 }
+
+
 
 .slick-dots {
   left: 50%;
@@ -637,10 +684,6 @@ button,
 button:active,
 button:focus {
   outline: none;
-}
-
-.slick-next {
-  right: 0;
 }
 
 
