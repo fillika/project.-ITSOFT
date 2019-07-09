@@ -1,20 +1,22 @@
 import AppService from './modules/app.service'
-import {config} from './modules/config'
+import {
+  config
+} from './modules/config'
 // import './modules/header.component'
-import './css/index.css'// Импортирую css файлы
-import './less/index.less'// Импортирую less файлы
-import './scss/index.scss'// Импортирую scss файлы
+import './css/index.css' // Импортирую css файлы
+import './less/index.less' // Импортирую less файлы
+import './scss/index.scss' // Импортирую scss файлы
 // import './common.blocks/switch/tgSwitch'// Импортирую scss файлы
-import 'jquery'// Импортирую jquery
+import 'jquery' // Импортирую jquery
 // import './modules/Datepicker/datepicker'// Datepicker
 // import './common.blocks/dropdown/dropdown'// Datepicker
 import $ from 'jquery';
 import './modules/slick/slick'
- 
+
 global.jQuery = $;
 global.$ = $;
 
-jQuery(document).ready(function($) {               // Для проверки работоспособности jQuery
+jQuery(document).ready(function ($) { // Для проверки работоспособности jQuery
   $('.slider').slick({
     infinite: false,
     dots: true,
@@ -34,7 +36,7 @@ document.querySelector('.burger').addEventListener('click', (element) => {
     mainSection.style.marginLeft = '215px';
     questionForm.style.display = 'none';
   } else {
-    sideBar.style.left = '-215px';
+    sideBar.removeAttribute('style');
     mainSection.style.marginLeft = '0px';
     questionForm.style.display = 'block';
   }
@@ -42,7 +44,7 @@ document.querySelector('.burger').addEventListener('click', (element) => {
 
 let lupein = document.querySelectorAll('.eyes__lupein-adult');
 
-lupein.forEach(function(element) {
+lupein.forEach(function (element) {
   element.addEventListener('mouseenter', () => {
     let description = element.nextSibling;
     description.style.display = 'block';
@@ -52,6 +54,9 @@ lupein.forEach(function(element) {
     eyeBlock.addEventListener('mouseleave', () => {
       description.style.display = 'none';
     })
-
   })
 })
+
+let sideBar = document.querySelector('.left-sidebar');
+
+console.log (sideBar.getAttribute('style'))
