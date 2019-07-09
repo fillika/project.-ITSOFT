@@ -111,6 +111,7 @@ li {
   font-weight: bold;
   font-size: 16px;
   z-index: 3;
+  transition: all ease .5s;
 
   &__navigation {
     margin-left: 25px;
@@ -126,8 +127,8 @@ li {
   }
 
   &__contacts {
-    position: fixed;
-    bottom: 10px;
+    position: absolute;
+    top: 830px;
     left: 25px;
   }
 
@@ -152,6 +153,7 @@ li {
 .main-section {
   max-width: 100%;
   padding-left: 215px;
+  transition: all ease .5s;
 }
 
 .header {
@@ -412,8 +414,8 @@ li {
 
   &__list {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
+    left: 35%;
+    transform: translate(-20%, 0);
     bottom: 45px;
     z-index: 3;
   }
@@ -622,6 +624,55 @@ button:focus {
   right: 0;
 }
 
-@media screen and (max-width: 800px) { 
-  
+@media screen and (max-width: 1480px) {
+  .bad-vision {
+
+    height: 900px;
+    padding: 70px 0 0 45px;
+
+    &__slide {
+      height: 900px;
+    }
+    
+    &__text {
+      width: 80%;
+    }
+
+    &__img {
+      top: 320px;
+      left: 150px;
+    }
+  }
+ 
+  .slick-dots {
+    bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .left-sidebar {
+    left: -215px;
+  }
+
+  .main-section {
+    padding-left: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .header {
+
+    &__img {
+      margin-left: 50px;
+    }
+  }
+
+  .risk-groups {
+
+    &__img {
+      left: 0;
+    }
+  }
 }
