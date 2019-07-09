@@ -19,6 +19,6 @@ jQuery(document).ready(function($) {               // Для проверки р
     infinite: false,
     dots: true,
     mobileFirst: true,
-    arrows: false
+    arrows: true
   });
 });
