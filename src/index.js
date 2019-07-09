@@ -36,3 +36,19 @@ document.querySelector('.burger').addEventListener('click', (element) => {
     mainSection.style.marginLeft = '0px';
   }
 });
+
+let lupein = document.querySelectorAll('.eyes__lupein-adult');
+
+lupein.forEach(function(element) {
+  element.addEventListener('mouseenter', () => {
+    let description = element.nextSibling;
+    description.style.display = 'block';
+    let eyeBlock = element.parentElement;
+
+
+    eyeBlock.addEventListener('mouseleave', () => {
+      description.style.display = 'none';
+    })
+
+  })
+})
