@@ -1,5 +1,6 @@
 @import 'header.css'; 
 @import '../fonts/fontello/css/fontello.css'; 
+@import '../modules/slick/slick.css'; 
 
 /* Импортировал другие CSS файлы из этой же папки */
 /* @import '../fonts/fontawesome/css/all.css';

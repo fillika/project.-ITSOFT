@@ -9,10 +9,16 @@ import 'jquery'// Импортирую jquery
 // import './modules/Datepicker/datepicker'// Datepicker
 // import './common.blocks/dropdown/dropdown'// Datepicker
 import $ from 'jquery';
+import './modules/slick/slick'
  
 global.jQuery = $;
 global.$ = $;
 
-// jQuery(document).ready(function($) {               // Для проверки работоспособности jQuery
-//   $('p').css('background-color', 'orange');
-// });
+jQuery(document).ready(function($) {               // Для проверки работоспособности jQuery
+  $('.slider').slick({
+    infinite: false,
+    dots: true,
+    mobileFirst: true,
+    arrows: false
+  });
+});
