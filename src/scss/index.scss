@@ -540,6 +540,7 @@ li {
     height: 180px;
     box-shadow: inset 0px 15px 15px -13px #7AC6F9;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 0 70px 0 35px;
@@ -633,17 +634,17 @@ button:focus {
     &__slide {
       height: 900px;
     }
-    
+
     &__text {
       width: 80%;
     }
 
     &__img {
       top: 320px;
-      left: 150px;
+      left: 15%;
     }
   }
- 
+
   .slick-dots {
     bottom: 100px;
   }
@@ -674,5 +675,168 @@ button:focus {
     &__img {
       left: 0;
     }
+  }
+
+  .online-test,
+  .where-to-buy {
+    width: 100%;
+  }
+
+  .footer {
+
+    &__info {
+      justify-content: space-around;
+    }
+
+    &__warning {
+      font-size: 30px;
+    }
+
+    &_img {
+      order: 0;
+    }
+
+    &__logo {
+      order: 1;
+    }
+
+    &__contacts {
+      order: 2;
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+
+  .header__img {
+    display: none;
+  }
+
+  .header {
+    justify-content: flex-end;
+  }
+
+  .blue-eye,
+  .green-eye,
+  .red-eye,
+  .yellow-eye {
+    width: 100%;
+  }
+
+  .h1 {
+    font-size: 30px;
+  }
+
+  .bad-vision {
+
+    &__text>p {
+      font-size: 15px;
+      margin-left: 50px;
+    }
+  }
+
+  .slick-dots {
+    left: 15%;
+    transform: translate(15%);
+  }
+
+  .slick-slide img {
+    width: 92%;
+  }
+
+  .risk-groups {
+
+    &__img {
+      display: none;
+    }
+
+    &__list {
+      left: 20%;
+    }
+
+    &__text {
+      left: 10%;
+    }
+  }
+
+  .footer {
+
+    &__warning {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .h1 {
+    font-size: 25px;
+  }
+
+  .bad-vision {
+
+    height: 750px;
+
+    &__text>p {
+      font-size: 13px;
+      margin-left: 25px;
+      margin-top: 25px;
+    }
+
+    &__img {
+      left: 5%;
+      right: 5%;
+      top: 280px;
+    }
+
+    &__slide {
+      height: 750px;
+    }
+  }
+
+  .slick-dots {
+    left: -10%;
+    transform: translate(20%);
+  }
+
+  .risk-groups {
+
+    &__text {
+      top: 100px;
+    }
+
+    &__navigation {
+      max-width: none;
+      font-size: 9px;
+    }
+
+    &__list {
+      left: 30%;
+    }
+  }
+
+  .other__title {
+    font-size: 35px;
+  }
+
+  .other__text {
+    width: 100%;
+  }
+
+  .online-test__footer {
+    font-size: 9px;
+    width: 320px;
+  }
+
+  .online-test, .where-to-buy {
+    height: 470px;
+  }
+}
+
+
+@media screen and (max-width: 376px) {
+  .slick-dots {
+    left: -20%;
+
   }
 }
