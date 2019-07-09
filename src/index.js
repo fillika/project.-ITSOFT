@@ -27,13 +27,16 @@ document.querySelector('.burger').addEventListener('click', (element) => {
   element.preventDefault();
   let sideBar = document.querySelector('.left-sidebar');
   let mainSection = document.querySelector('.main-section');
+  let questionForm = document.querySelector('.header__question');
 
   if (sideBar.style.left != '0px') {
     sideBar.style.left = '0px';
     mainSection.style.marginLeft = '215px';
+    questionForm.style.display = 'none';
   } else {
     sideBar.style.left = '-215px';
     mainSection.style.marginLeft = '0px';
+    questionForm.style.display = 'block';
   }
 });
 
