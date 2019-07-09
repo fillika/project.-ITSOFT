@@ -68,6 +68,34 @@ li {
 .header {
   display: flex;
   justify-content: space-between;
+  height: 40px;
+
+  &__bausch-img {
+    padding: 12px 26px;
+  }
+
+  &__valeant-img {
+    position: absolute;
+    top: 7px;
+    padding-left: 20px;
+  }
+
+  &__question {
+    position: relative;
+    color: #005494;
+    font-family: 'Open sans', sans-serif;
+    font-size: 12px;
+    align-self: center;
+    padding-right: 30px;
+    cursor: pointer;
+
+    & img {
+      position: absolute;
+      left: -30px;
+      top: 3px;
+
+    }
+  }
 }
 
 .eyes {
@@ -101,7 +129,7 @@ li {
   }
 
   &__complex {
-    font-family: 'Open sans',sans-serif;
+    font-family: 'Open sans', sans-serif;
     font-size: 13px;
     color: #005494;
     position: absolute;
@@ -304,11 +332,12 @@ li {
 
   &__button {
     font-size: 28px;
-    border-radius: 45px 
+    border-radius: 45px
   }
 }
 
-.online-test, .where-to-buy {
+.online-test,
+.where-to-buy {
   width: 50%;
   min-width: 550px;
   height: 610px;
