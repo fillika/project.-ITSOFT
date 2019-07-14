@@ -25,10 +25,28 @@ jQuery(document).ready(function ($) { // Для проверки работос�
   });
 });
 
+let mainSection = document.querySelector('.main-section');
+let sideBar = document.querySelector('.left-sidebar');
+let tabs = document.querySelectorAll('.risk-groups__navigation a');
+
+function stopDefAction(evt) {
+  evt.preventDefault();
+}
+
+tabs.forEach(function (element) {
+  element.addEventListener('click', stopDefAction);
+});
+
+window.addEventListener('resize', () => {
+  let openWindow = window.innerWidth;
+  if (openWindow > 1100 && mainSection.style.marginLeft == '215px') {
+    mainSection.removeAttribute('style');
+    sideBar.removeAttribute('style');
+  }
+})
+
 document.querySelector('.burger').addEventListener('click', (element) => {
   element.preventDefault();
-  let sideBar = document.querySelector('.left-sidebar');
-  let mainSection = document.querySelector('.main-section');
   let questionForm = document.querySelector('.header__question');
 
   if (sideBar.style.left != '0px') {
@@ -37,8 +55,10 @@ document.querySelector('.burger').addEventListener('click', (element) => {
     questionForm.style.display = 'none';
   } else {
     sideBar.removeAttribute('style');
-    mainSection.style.marginLeft = '0px';
-    questionForm.style.display = 'block';
+    mainSection.removeAttribute('style');
+    setTimeout(() => {
+      questionForm.style.display = 'block';
+    }, 300);
   }
 });
 
@@ -50,13 +70,8 @@ lupein.forEach(function (element) {
     description.style.display = 'block';
     let eyeBlock = element.parentElement;
 
-
     eyeBlock.addEventListener('mouseleave', () => {
       description.style.display = 'none';
     })
   })
 })
-
-let sideBar = document.querySelector('.left-sidebar');
-
-console.log (sideBar.getAttribute('style'))

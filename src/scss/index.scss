@@ -33,6 +33,16 @@ li {
   border: 4px solid #005397;
   border-radius: 22px;
 
+  & > span {
+    display: block;
+    width: 50px;
+    height: 30px;
+    background: transparent;
+    position: absolute;
+    top: -15px;
+    left: -4px;
+  }
+
   &:hover:after,
   &:hover:before,
   &:hover {
@@ -141,7 +151,7 @@ li {
 
   &__contacts {
     position: absolute;
-    top: 830px;
+    top: 85vh;
     left: 25px;
   }
 
@@ -258,10 +268,10 @@ li {
 
 .eye {
   display: block;
-  margin: auto;
-  align-items: center;
-  left: 300px;
-  padding-top: 140px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .blue-eye,
@@ -309,8 +319,10 @@ li {
 
   &__active {
     display: block;
-    margin: auto;
-    padding-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-53.5%, -74%);
     display: none;
   }
 
@@ -429,8 +441,11 @@ li {
 
   &__list {
     position: absolute;
-    left: 35%;
-    transform: translate(-20%, 0);
+    display: block;
+    width: 475px;
+    height: 70px;
+    left: 50%;
+    transform: translate(-50%);
     bottom: 45px;
     z-index: 3;
   }
@@ -471,6 +486,13 @@ li {
     width: 116px;
     height: 38px;
     margin-top: 30px;
+
+    &:hover {
+      background: #fff;
+      transition: .25s ease;
+      color: #00366E;
+      font-weight: bold;
+    }
   }
 }
 
@@ -479,6 +501,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   font-family: 'Open sans', sans-serif;
+  margin-top: -5px;
 
   &__title {
     font-size: 45px;
@@ -499,12 +522,17 @@ li {
   }
 }
 
+.online-test {
+  background: #fff;
+}
+
 .online-test,
 .where-to-buy {
   position: relative;
   padding-left: 35px;
   width: 50%;
   height: 610px;
+  z-index: 5;
 
   &__footer {
     position: absolute;
@@ -519,7 +547,7 @@ li {
 
   &__img {
     position: absolute;
-    left: -40px;
+    left: -35px;
     top: -15px;
   }
 }
@@ -631,10 +659,14 @@ li {
 
 .slick-dots {
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%);
   bottom: 150px;
   background: #CAE5F4;
   z-index: 3;
+  display: block;
+  width: 280px;
+  height: 40px;
+
 
 
 
@@ -673,6 +705,13 @@ li {
       border: 2px solid #005397;
       background: #CAE5F4;
       z-index: 3;
+      cursor: pointer;
+
+      &:hover {
+        transition: .25s ease;
+        color: #fff;
+        border-color: #fff;
+      }
     }
   }
 }
@@ -690,6 +729,8 @@ button:focus {
 
 
 @media screen and (max-width: 1480px) {
+
+
   .bad-vision {
 
     height: 900px;
@@ -714,7 +755,13 @@ button:focus {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1170px) {
+  .risk-groups__img {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 1100px) {
   .blue-eye__weakness {
     right: 10px;
   }
@@ -804,8 +851,7 @@ button:focus {
   }
 
   .slick-dots {
-    left: 15%;
-    transform: translate(15%);
+    transform: translate(-57%)
   }
 
   .slick-slide img {
@@ -818,10 +864,6 @@ button:focus {
       display: none;
     }
 
-    &__list {
-      left: 20%;
-    }
-
     &__text {
       left: 10%;
     }
@@ -830,7 +872,7 @@ button:focus {
   .footer {
 
     &__warning {
-      font-size: 20px;
+      font-size: 25px;
     }
   }
 }
@@ -839,10 +881,6 @@ button:focus {
 
   .h1 {
     font-size: 25px;
-  }
-
-  .left-sidebar__contacts {
-    top: 570px;
   }
 
   .bad-vision {
@@ -866,12 +904,9 @@ button:focus {
     }
   }
 
-  .slick-dots {
-    left: -10%;
-    transform: translate(20%);
-  }
-
   .risk-groups {
+
+    height: 560px;
 
     &__text {
       top: 100px;
@@ -883,8 +918,13 @@ button:focus {
     }
 
     &__list {
-      left: 30%;
+      width: 270px;
+      height: 130px;
     }
+  }
+
+  .button__blue, .button__white {
+    margin-left: 30px;
   }
 
   .other__title {
@@ -894,6 +934,7 @@ button:focus {
   .online-test__footer {
     font-size: 9px;
     width: 320px;
+    margin-right: 5px;
   }
 
   .online-test,
@@ -907,19 +948,7 @@ button:focus {
   }
 }
 
-
-@media screen and (max-width: 376px) {
-  .slick-dots {
-    left: -20%;
-
-  }
-}
-
 @media screen and (max-width: 331px) {
-
-  .slick-dots {
-    left: -29%;
-  }
 
   .risk-groups__navigation {
     font-size: 8px;
