@@ -28,6 +28,7 @@ jQuery(document).ready(function ($) { // Для проверки работос�
 let mainSection = document.querySelector('.main-section');
 let sideBar = document.querySelector('.left-sidebar');
 let tabs = document.querySelectorAll('.risk-groups__navigation a');
+let questionForm = document.querySelector('.header__question');
 
 function stopDefAction(evt) {
   evt.preventDefault();
@@ -42,12 +43,12 @@ window.addEventListener('resize', () => {
   if (openWindow > 1100 && mainSection.style.marginLeft == '215px') {
     mainSection.removeAttribute('style');
     sideBar.removeAttribute('style');
+    questionForm.removeAttribute('style');
   }
 })
 
 document.querySelector('.burger').addEventListener('click', (element) => {
   element.preventDefault();
-  let questionForm = document.querySelector('.header__question');
 
   if (sideBar.style.left != '0px') {
     sideBar.style.left = '0px';
