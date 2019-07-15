@@ -113,3 +113,7 @@ feedbackFoorm.addEventListener('click', () => {
     form.classList.add('hide-feedback')
   }
 })
+
+window.addEventListener('keydown', (event) => {
+  console.log(event) // Цифры от 0 до 9 идут в диапазоне 48-57 KeyCode
+})

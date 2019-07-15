@@ -143,6 +143,10 @@ li, input {
         padding-left: 5px;
         font-size: 20px;
         color: #005494;
+
+        &::-webkit-inner-spin-button {
+            display: none;
+        }
     }
 
     &__textarea {

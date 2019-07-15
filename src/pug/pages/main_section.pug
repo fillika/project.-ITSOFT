@@ -2,8 +2,8 @@ section.main-section
   div(class="feedback-form hide-feedback")
     p.feedback-form__text Ваше имя
     input(class="feedback-form__input" type="text" placeholder="Ваше имя")
-    p.feedback-form__text Номер телефона
-    input(class="feedback-form__input" type="tel" placeholder="Номер телефона")
+    p(class="feedback-form__text") Номер телефона
+    input(class="feedback-form__input" type="tel" placeholder="Номер телефона" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" title="Введите телефон в формате +7, не более 12 символов")
     p.feedback-form__text Ваш вопрос
     textarea(class="feedback-form__textarea" name="", cols="21", rows="7")
     a(href="#" class="button feedback-form__button") Отправить
