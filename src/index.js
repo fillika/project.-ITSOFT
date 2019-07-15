@@ -76,3 +76,26 @@ lupein.forEach(function (element) {
     })
   })
 })
+
+
+let links = document.querySelectorAll('.risk-groups__link');
+
+links.forEach((e) => {
+  e.addEventListener('click', () => {
+   
+    let data = e.getAttribute('data-set');
+    let article = document.querySelectorAll('.risk-groups__tab')
+  
+    for (let i = 0; i < article.length; i++) {
+      let dataArticle = article[i].getAttribute('data-set')
+      article[i].classList.remove('active-tab')
+      links[i].classList.remove('active')
+      
+      if (dataArticle == data) {
+        article[i].classList.add('active-tab')
+        links[i].classList.add('active')
+      }
+    }
+
+  })
+})

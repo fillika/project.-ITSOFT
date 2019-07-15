@@ -3,14 +3,14 @@ section.main-section
     a(href="").burger
       span
     .header__img
-      a(href="#")
+      a(href="#" id="about")
         img(class="header__bausch-img" src="../img/BAUSCH.png", alt="BAUSCH+LOMB")
       a(href="#")
         img(class="header__valeant-img" src="../img/VALEANT.png", alt="VALEANT")
     a(href="#").header__question <u>Задать вопрос</u> производителю
       img(src="../img/comment.png", alt="")
   
-  section.eyes
+  section(class="eyes")
     .blue-eye
       div(class="eyes__text") Защита глаз <br> при интенсивных нагрузках
       .blue-eye__weakness Усталось
@@ -40,7 +40,7 @@ section.main-section
       img(class="eyes__lupein-adult" src="../img/lutein_eye2.png", alt="Люпеин")
       a(href="#").eyes__complex Лютеин комплекс
 
-  section.bad-vision
+  section(class="bad-vision" id="problems")
     .slider
       .bad-vision__slide
         .bad-vision__text
@@ -72,19 +72,32 @@ section.main-section
     .risk-groups__img
       img(src="../img/man.png", alt="")
     .risk-groups__text
-      h3 Школьники и студенты
-      p В последнее десятилетие врачи отмечают печальную тенденцию: все чаще у детей школьного возраста выявляются болезни органов зрения. Сложный оптический прибор, идеально приспосабливающийся к изменчивым условиям окружающей среды, глаз оказался не подготовленным к современным реалиям.
+      div(class="risk-groups__tab " data-set="0")
+        h3 Работающие за компьютером
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum nihil expedita vel obcaecati blanditiis molestiae iste rerum fuga perferendis dolorum quas numquam distinctio, quod ab nam? Iusto labore dolor ab minima possimus vero corporis beatae expedita atque debitis culpa ullam, animi aliquid voluptates asperiores. Animi atque rerum debitis in modi?
+      div(class="risk-groups__tab active-tab" data-set="1")
+        h3 Школьники и студенты
+        p В последнее десятилетие врачи отмечают печальную тенденцию: все чаще у детей школьного возраста выявляются болезни органов зрения. Сложный оптический прибор, идеально приспосабливающийся к изменчивым условиям окружающей среды, глаз оказался не подготовленным к современным реалиям.
+      div(class="risk-groups__tab" data-set="2")
+        h3 Автолюбители
+        p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Он эта от всех переписали выйти. Безопасную переписали заглавных вдали буквенных строчка использовало безорфографичный не! Взобравшись буквоград запятой вопрос заманивший то свою однажды проектах маленький, страну агентство маленькая назад деревни последний!
+      div(class="risk-groups__tab" data-set="3")
+        h3 Люди с повышенными зрительными нагрузками
+        p В последнее десятилетие врачи отмечают печальную тенденцию: все чаще у детей школьного возраста выявляются болезни органов зрения. Сложный оптический прибор, идеально приспосабливающийся к изменчивым условиям окружающей среды, глаз оказался не подготовленным к современным реалиям.
+      div(class="risk-groups__tab" data-set="4")
+        h3 Туристы
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aut temporibus aspernatur suscipit at delectus vero corrupti molestiae! Voluptates eum magni atque dolorem vitae doloribus hic quasi deleniti, corporis repudiandae delectus molestiae, illo nam.
       a(class="button risk-groups__button" href="#") Подробнее
     .risk-groups__list
       .risk-groups__navigation
-        a(href="#").risk-groups__link Работающие за компьютером
-        a(href="#").risk-groups__link Школьники и студенты
-        a(href="#").risk-groups__link Автолюбители
-        a(href="#").risk-groups__link Люди с повышенными зрительными нагрузками
-        a(href="#").risk-groups__link Туристы
+        a(href="#" data-set="0").risk-groups__link Работающие за компьютером
+        a(href="#" data-set="1" class="risk-groups__link active") Школьники и студенты
+        a(href="#" data-set="2").risk-groups__link Автолюбители
+        a(href="#" data-set="3").risk-groups__link Люди с повышенными зрительными нагрузками
+        a(href="#" data-set="4").risk-groups__link Туристы
 
   section.other
-    .online-test
+    div(class="online-test" id="online-test")
       p.other__title On-line тест
       p.other__text Мы предллагаем пройти небольшой тест, который поможет легко и комфортно проверить <b>остроту, контрастность</b> и <b>цветовосприятие</b> вашего зрения
       br
@@ -92,7 +105,7 @@ section.main-section
       .online-test__footer
         img(class="online-test__img" src="../img/checkbox.png", alt="")
         p Если по результатам теста Вы отметите ухудшение зрения, <br> Вам следует обратиться к офтальмологу за дополнительной консультацией
-    .where-to-buy
+    div(class="where-to-buy" id="where-to-buy")
       p(class="other__title") Где купить
       p.other__text Препараты можно приобрести в аптеках по всей России, а так же в интернет аптеках
       a(href="#" class="button other__button button__white") Подробнее
@@ -103,7 +116,7 @@ section.main-section
       .footer__img
         a(href="#")
           img(src="../img/VALEANT_footer.png", alt="VALEANT")
-      .footer__contacts ООО «ВАЛЕАНТ», 115162, г. Москва, ул. Шаболовка, д.31, стр.5 <br> Тел./Факс: +7 495 510-2879 www.valeant.com
+      div(class="footer__contacts" id="contacts") ООО «ВАЛЕАНТ», 115162, г. Москва, ул. Шаболовка, д.31, стр.5 <br> Тел./Факс: +7 495 510-2879 www.valeant.com
       .footer__logo
         div
           a(href="#")
