@@ -11,10 +11,11 @@
 }
 
 a,
-li {
+li, input {
     text-decoration: none;
     color: #fff;
     list-style-type: none;
+    outline: none;
 }
 
 .h1 {
@@ -113,6 +114,55 @@ li {
     }
 }
 
+.feedback-form {
+    font-family: 'Open sans', sans-serif;
+    font-size: 20px;
+    color: #005494;
+    display: block;
+    position: absolute;
+    max-width: 350px;
+    height: 450px;
+    padding: 5px 20px;
+    border-radius: 25px; 
+    background: #CAE5F4;
+    left: 50%;
+    transform: translate(-15%, -5%);
+    top: 5%;
+    transition: .5s ease;
+    z-index: 10;
+
+    &__text {
+        padding-top: 10px;
+
+    }
+
+    &__input {
+        width: 250px;
+        height: 40px;
+        border-radius: 10px;
+        padding-left: 5px;
+        font-size: 20px;
+        color: #005494;
+    }
+
+    &__textarea {
+        border-radius: 10px;
+        font-size: 20px;
+        resize: none;
+        color: #005494;
+        outline: none;
+    }
+
+    &__button {
+        margin-top: 15px;
+        height: 50px;
+        line-height: 40px;
+        font-size: 25px;
+        color: #005494;
+        border-color: #005494;
+    }
+}
+
 .icon {
 
     &-facebook,
@@ -187,6 +237,7 @@ li {
     padding-left: 215px;
     transition: all ease .5s;
     overflow: hidden;
+    position: relative;
 }
 
 .header {
@@ -749,6 +800,11 @@ button:focus {
 }
 
 
+.hide-feedback {
+    transform: translate(-15%, -160%);
+}
+
+
 @media screen and (max-width: 1480px) {
 
 
@@ -783,6 +839,15 @@ button:focus {
 }
 
 @media screen and (max-width: 1100px) {
+
+    .feedback-form {
+        transform: translate(-50%, -10%)
+    }
+
+    .hide-feedback {
+        transform: translate(-50%, -160%);
+    }
+
     .blue-eye__weakness {
         right: 10px;
     }
@@ -927,7 +992,7 @@ button:focus {
 
     .risk-groups {
 
-        height: 560px;
+        height: 580px;
 
         &__text {
             top: 100px;
@@ -944,7 +1009,9 @@ button:focus {
         }
 
         &__tab {
-            & > h3 {
+            margin-right: 10px;
+
+            &>h3 {
                 font-size: 18px;
             }
         }
@@ -984,6 +1051,11 @@ button:focus {
 
 @media screen and (max-width: 331px) {
 
+    .risk-groups {
+
+        height: 600px;
+    }
+
     .risk-groups__navigation {
         font-size: 8px;
     }
@@ -999,3 +1071,4 @@ button:focus {
         bottom: 20px;
     }
 }
+

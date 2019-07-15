@@ -1,11 +1,21 @@
 section.main-section
+  div(class="feedback-form hide-feedback")
+    p.feedback-form__text Ваше имя
+    input(class="feedback-form__input" type="text" placeholder="Ваше имя")
+    p.feedback-form__text Номер телефона
+    input(class="feedback-form__input" type="tel" placeholder="Номер телефона")
+    p.feedback-form__text Ваш вопрос
+    textarea(class="feedback-form__textarea" name="", cols="21", rows="7")
+    a(href="#" class="button feedback-form__button") Отправить
+
+
   section.header
     a(href="").burger
       span
     .header__img
       a(href="#" id="about")
         img(class="header__bausch-img" src="../img/BAUSCH.png", alt="BAUSCH+LOMB")
-      a(href="#")
+      a(href="http://valeant.com.ru/" target="_blank")
         img(class="header__valeant-img" src="../img/VALEANT.png", alt="VALEANT")
     a(href="#").header__question <u>Задать вопрос</u> производителю
       img(src="../img/comment.png", alt="")
@@ -114,11 +124,11 @@ section.main-section
     .footer__warning имеются противопоказания.перед применением ознакомьтесь <br> с инструкцией и проконсультируйтесь со специалистом
     .footer__info
       .footer__img
-        a(href="#")
+        a(href="http://valeant.com.ru/" target="_blank")
           img(src="../img/VALEANT_footer.png", alt="VALEANT")
       div(class="footer__contacts" id="contacts") ООО «ВАЛЕАНТ», 115162, г. Москва, ул. Шаболовка, д.31, стр.5 <br> Тел./Факс: +7 495 510-2879 www.valeant.com
       .footer__logo
         div
-          a(href="#")
-            img(src="../img/ITSOFT.png", alt="")
+          a(href="https://itsoft.ru/" target="_blank")
+            img(src="../img/ITSOFT.png", alt="ITSOFT" )
         span.footer__text <u>Создание сайта.</u> <br> Веб-студия <em><b>itsoft</b></em>

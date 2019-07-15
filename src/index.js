@@ -6,10 +6,7 @@ import {
 import './css/index.css' // Импортирую css файлы
 import './less/index.less' // Импортирую less файлы
 import './scss/index.scss' // Импортирую scss файлы
-// import './common.blocks/switch/tgSwitch'// Импортирую scss файлы
 import 'jquery' // Импортирую jquery
-// import './modules/Datepicker/datepicker'// Datepicker
-// import './common.blocks/dropdown/dropdown'// Datepicker
 import $ from 'jquery';
 import './modules/slick/slick'
 
@@ -23,6 +20,12 @@ jQuery(document).ready(function ($) { // Для проверки работос�
     mobileFirst: true,
     arrows: true
   });
+  $(".left-sidebar__navigation").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+});
 });
 
 let mainSection = document.querySelector('.main-section');
@@ -98,4 +101,15 @@ links.forEach((e) => {
     }
 
   })
+})
+
+let feedbackFoorm = document.querySelector('.header__question')
+
+feedbackFoorm.addEventListener('click', () => {
+  let form = document.querySelector('.feedback-form');
+  if (form.classList.contains('hide-feedback')) {
+    form.classList.remove('hide-feedback')
+  } else {
+    form.classList.add('hide-feedback')
+  }
 })
